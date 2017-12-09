@@ -30,7 +30,7 @@ import argparse
 import sys
 import tempfile
 
-from tensorflow.examples.tutorials.mnist import input_data
+#from tensorflow.examples.tutorials.mnist import input_data
 
 import tensorflow as tf
 
@@ -54,7 +54,7 @@ def deepnn(x):
   # Last dimension is for "features" - there is only one here, since images are
   # grayscale -- it would be 3 for an RGB image, 4 for RGBA, etc.
   with tf.name_scope('reshape'):
-    x_image = tf.reshape(x, [-1, 32, , 1])
+    x_image = tf.reshape(x, [-1, 32, 32 , 3])
 
   # First convolutional layer - maps one grayscale image to 32 feature maps.
   # Task 2c part 1: change  64 to 32 change to 32 feature maps
